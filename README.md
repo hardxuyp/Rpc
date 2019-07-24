@@ -1,2 +1,15 @@
 # Rpc
-In this repository, I can teach you how to write an excellent rpc lib using C++.
+在此贡献我的一个轮子：用C++写的rpc库。源码中有详尽的注释，希望你能从中有所收获，也希望你能提出宝贵意见。
+
+特性：
+0、高性能服务端，由accept线程+IO线程池+业务线程池组成；
+1、高性能客户端，由IO线程池组成；
+2、采用protobuf进行序列化、反序列化；
+3、客户端、服务端之间通过心跳保持连接；
+4、对各种异常网络状况的鲁棒性处理；
+5、跨平台（Linux、Windows）。
+
+依赖：
+0、boost：用于实现多线程等；
+1、protobuf：用于实现数据的序列化、反序列化，也用于定义和生成rpc数据及接口；
+2、libevent：用于实现基于IO多路复用机制的网络事件循环。
