@@ -1,0 +1,20 @@
+option cc_generic_services = true;
+
+package testNamespace;
+
+message NumRequest
+{
+	optional int32 input1 = 1;
+	optional int32 input2 = 2;
+}
+
+message NumResponse
+{
+	optional int32 output = 1;
+}
+
+service NumService
+{
+	rpc add(NumRequest) returns(NumResponse);
+	rpc minus(NumRequest) returns(NumResponse);
+}

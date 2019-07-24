@@ -1,0 +1,15 @@
+option cc_generic_services = true;
+
+message ProtocolBodyRequest
+{
+	optional string serviceName = 1;
+	optional uint32 methodIndex = 2;
+	optional uint32 callId = 3;
+	optional bytes content = 4;
+}
+
+message ProtocolBodyResponse
+{
+	optional uint32 callId = 1;
+	optional bytes content = 2;
+}
